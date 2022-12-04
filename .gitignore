@@ -1,0 +1,5 @@
+*.json
+*.zip
+*.ipynb
+__pycache__/
+venv/
