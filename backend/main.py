@@ -2,7 +2,6 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from utils import getData
 import zipfile
-import pandas as pd
 
 app = FastAPI()
 origins = ["*"]
