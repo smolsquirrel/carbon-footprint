@@ -49,7 +49,7 @@ def emissions(file: UploadFile = File(...)):
                 tD = 0
                 tE = 0
                 if month not in d[year]:
-                    d[year][f"{months[month]}-{month}"] = {"days": []}
+                    d[year][f"{months[month]}-{month}"] = {}
                 with f.open(x) as file:
                     data = getData(file)
                     for day in data:
@@ -61,7 +61,7 @@ def emissions(file: UploadFile = File(...)):
                                 ePerT[t] = 0
                             dPerT[t] += data[day]["totalDistancePerType"][t]
                             ePerT[t] += data[day]["totalEmissionsPerType"][t]
-                    d[year][f"{months[month]}-{month}"]["days"].append(data)
+                    d[year][f"{months[month]}-{month}"]["days"] = data
                     d[year][f"{months[month]}-{month}"]["totalDistance"] = tD
                     d[year][f"{months[month]}-{month}"]["totalEmissions"] = tE
                     d[year][f"{months[month]}-{month}"]["totalDistancePerType"] = dPerT
