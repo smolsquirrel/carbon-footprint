@@ -31,7 +31,7 @@ function Upload({
 		setLoaded(false)
 		var data = new FormData()
 		data.append("file", file)
-		const r = await fetch("http://127.0.0.1:8000/getEmissions", {
+		const r = await fetch("https://climate-mvuv.onrender.com/getEmissions", {
 			method: "POST",
 			body: data,
 		})
