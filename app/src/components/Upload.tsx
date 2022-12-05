@@ -31,6 +31,7 @@ function Upload({
 	const [failed, setFailed] = useState(false)
 	const handleChange = async (file: any) => {
 		setLoading(true)
+		setFailed(false)
 		setData({})
 		setLoaded(false)
 		var data = new FormData()
@@ -40,9 +41,9 @@ function Upload({
 			body: data,
 		})
 		const d = await r.json()
+		setLoading(false)
 		if (Object.keys(d).length === 0) {
 			setFailed(true)
-			setLoading(true)
 			return
 		}
 		setYears(Object.keys(d))
