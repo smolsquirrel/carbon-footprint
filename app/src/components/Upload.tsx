@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { FileUploader } from 'react-drag-drop-files';
+import { useState } from "react"
+import { FileUploader } from "react-drag-drop-files"
 
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import CircularProgress from '@mui/material/CircularProgress';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import CircularProgress from "@mui/material/CircularProgress"
+import Grid from "@mui/material/Grid"
+import Typography from "@mui/material/Typography"
 
 const fileTypes = ["ZIP"]
 
@@ -98,6 +98,12 @@ function Upload({
 						variant="contained"
 					>
 						Get Your File
+					</Button>
+					<Button
+						href="https://github.com/smolsquirrel/climate-changers/raw/main/backend/example.zip"
+						variant="contained"
+					>
+						Get Example File
 					</Button>
 				</Grid>
 				<Grid item>
