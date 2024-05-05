@@ -38,16 +38,14 @@ def emissions(file: UploadFile = File(...)):
 
     d = {}
     with zipfile.ZipFile(file.filename, "r") as f:
-        print(f.namelist())
         for x in f.namelist():
-            print(x)
             if x.startswith(
                 "Takeout/Location History (Timeline)/Semantic Location History"
             ):
-                year = x[51:55]
+                year = x[62:66]
                 if year not in d:
                     d[year] = {}
-                month = x[61:-5]
+                month = x[72:-5]
                 dPerT = {}
                 ePerT = {}
                 tD = 0
