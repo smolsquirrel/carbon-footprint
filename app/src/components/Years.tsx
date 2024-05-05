@@ -1,8 +1,5 @@
-import React from 'react';
-
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
 
 interface Props {
 	curYear: String

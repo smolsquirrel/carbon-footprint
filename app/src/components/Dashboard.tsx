@@ -1,21 +1,12 @@
-import { useState } from 'react';
+import Box from "@mui/material/Box"
+import FormControl from "@mui/material/FormControl"
+import Grid from "@mui/material/Grid"
+import InputLabel from "@mui/material/InputLabel"
+import MenuItem from "@mui/material/MenuItem"
+import Select, { SelectChangeEvent } from "@mui/material/Select"
 
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Container from '@mui/material/Container';
-import FormControl from '@mui/material/FormControl';
-import Grid from '@mui/material/Grid';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Paper from '@mui/material/Paper';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Typography from '@mui/material/Typography';
-
-import Monthly from './Monthly';
-import StatsBar from './StatsBar';
-import Years from './Years';
+import Monthly from "./Monthly"
+import StatsBar from "./StatsBar"
 
 interface Props {
 	data: any
