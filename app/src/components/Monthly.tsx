@@ -149,30 +149,25 @@ function Monthly({ data }: Props) {
 	}
 
 	return (
-		<Grid container spacing={5} direction="column" justifyContent="center" alignItems="center">
-			<Grid container item direction="column" spacing={3}>
-				<Grid item>
-					<Typography variant="h4">Monthly Statistics</Typography>
+		<Grid container spacing={6} direction="column" justifyContent="center" alignItems="center">
+			<Grid container item spacing={5} justifyContent="center">
+				<Grid item xs={4}>
+					<Typography variant="h5">Emission proportions by type</Typography>
+					<Doughnut data={monthlyEmPie} />
 				</Grid>
-				<Grid container item spacing={4} alignItems="center" justifyContent="center">
-					<Grid item xs={4}>
-						<Typography variant="h5">Emission proportions by type</Typography>
-						<Doughnut data={monthlyEmPie} />
-					</Grid>
-					<Grid item xs={7}>
-						<Typography variant="h5">CO2 emissions by type (kg)</Typography>
-						<Line options={Lineoptions} data={monthlyEmLine} />
-					</Grid>
+				<Grid item xs={7}>
+					<Typography variant="h5">CO2 emissions by type (kg)</Typography>
+					<Line options={Lineoptions} data={monthlyEmLine} />
 				</Grid>
-				<Grid container item spacing={4} alignItems="center" justifyContent="center">
-					<Grid item xs={4}>
-						<Typography variant="h5">Travelled distance proportions by type</Typography>
-						<Doughnut data={monthlyDPie} />
-					</Grid>
-					<Grid item xs={7}>
-						<Typography variant="h5">Travelled distance by type (km)</Typography>
-						<Line options={Lineoptions} data={monthlyDLine} />
-					</Grid>
+			</Grid>
+			<Grid container item spacing={5} justifyContent="center">
+				<Grid item xs={4}>
+					<Typography variant="h5">Travelled distance proportions by type</Typography>
+					<Doughnut data={monthlyDPie} />
+				</Grid>
+				<Grid item xs={7}>
+					<Typography variant="h5">Travelled distance by type (km)</Typography>
+					<Line options={Lineoptions} data={monthlyDLine} />
 				</Grid>
 			</Grid>
 		</Grid>

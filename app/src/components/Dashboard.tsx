@@ -3,6 +3,7 @@ import FormControl from "@mui/material/FormControl"
 import Grid from "@mui/material/Grid"
 import InputLabel from "@mui/material/InputLabel"
 import MenuItem from "@mui/material/MenuItem"
+import Paper from "@mui/material/Paper"
 import Select, { SelectChangeEvent } from "@mui/material/Select"
 
 import Monthly from "./Monthly"
@@ -44,7 +45,7 @@ function Dashboard({
 	}
 
 	return (
-		<Box p={5}>
+		<Box p={5} component={Paper}>
 			<Grid container spacing={2}>
 				<Grid container item xs={1} direction="column" spacing={2}>
 					<Grid item container>

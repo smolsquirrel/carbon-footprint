@@ -22,7 +22,7 @@ function App() {
 
 	return (
 		<Box>
-			<AppBar position="static">
+			<AppBar position="static" sx={{ bgcolor: "#20bf6b" }}>
 				<Toolbar>
 					<Typography
 						component="a"
@@ -40,30 +40,32 @@ function App() {
 					</Typography>
 				</Toolbar>
 			</AppBar>
-			{loaded ? (
-				<Dashboard
-					data={data}
-					curYear={curYear}
-					setCurYear={setCurYear}
-					years={years}
-					setCurData={setCurData}
-					curData={curData}
-					curMonth={curMonth}
-					setCurMonth={setCurMonth}
-					months={months}
-					setMonths={setMonths}
-				/>
-			) : (
-				<Upload
-					setLoaded={setLoaded}
-					setData={setData}
-					setYears={setYears}
-					setCurYear={setCurYear}
-					setCurMonth={setCurMonth}
-					setCurData={setCurData}
-					setMonths={setMonths}
-				/>
-			)}
+			<Box>
+				{loaded ? (
+					<Dashboard
+						data={data}
+						curYear={curYear}
+						setCurYear={setCurYear}
+						years={years}
+						setCurData={setCurData}
+						curData={curData}
+						curMonth={curMonth}
+						setCurMonth={setCurMonth}
+						months={months}
+						setMonths={setMonths}
+					/>
+				) : (
+					<Upload
+						setLoaded={setLoaded}
+						setData={setData}
+						setYears={setYears}
+						setCurYear={setCurYear}
+						setCurMonth={setCurMonth}
+						setCurData={setCurData}
+						setMonths={setMonths}
+					/>
+				)}
+			</Box>
 		</Box>
 	)
 }

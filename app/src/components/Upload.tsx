@@ -60,10 +60,17 @@ function Upload({
 	}
 	const [loading, setLoading] = useState(false)
 	return (
-		<Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+		<Box
+			className="upload"
+			display="flex"
+			justifyContent="center"
+			alignItems="center"
+			minHeight="90vh"
+		>
 			<Grid
 				container
 				direction="column"
+				display="flex"
 				justifyContent="center"
 				alignItems="center"
 				spacing={2}
@@ -91,23 +98,37 @@ function Upload({
 				) : (
 					<></>
 				)}
-				<Grid item>
-					<Button
-						href="https://takeout.google.com/settings/takeout/custom/location_history"
-						target="_blank"
-						variant="contained"
-					>
-						Get Your File
-					</Button>
-					<Button
-						href="https://github.com/smolsquirrel/climate-changers/raw/main/backend/example.zip"
-						variant="contained"
-					>
-						Get Example File
-					</Button>
+				<Grid
+					item
+					container
+					spacing={2}
+					display="flex"
+					justifyContent="center"
+					alignItems="center"
+				>
+					<Grid item>
+						<Button
+							href="https://takeout.google.com/settings/takeout/custom/location_history"
+							target="_blank"
+							variant="contained"
+							sx={{ bgcolor: "#20bf6b" }}
+						>
+							Get Your File
+						</Button>
+					</Grid>
+					<Grid item>
+						<Button
+							href="https://github.com/smolsquirrel/climate-changers/raw/main/backend/example.zip"
+							variant="contained"
+							sx={{ bgcolor: "#20bf6b" }}
+						>
+							Get Example File
+						</Button>
+					</Grid>
 				</Grid>
 				<Grid item>
 					<FileUploader handleChange={handleChange} name="file" types={fileTypes} />
+					<Typography>Upload the zip file</Typography>
 				</Grid>
 			</Grid>
 		</Box>
